@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #fff;
+}
+
+#container {
+    height: auto;
+    width: auto;
+    background: #0E6655;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#startingPage {
+    width: 400px;
+}
+
+#startingPage header,
+#winner p {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#startingPage .title {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+#startingPage #button {
+    display: flex;
+    width: 100%;
+}
+
+#button button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: #45B39D;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#button button:first-child {
+    margin-right: 40px;
+}
+
+#startingPage #button button:hover,
+#winner #button button:hover {
+    transform: scale(0.90);
+}
+
+#startingPage .credit{
+    color: #fff;
+    text-align: end;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+#startingPage .credit span{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#winner {
+    display: none;
+    margin: 10px;
+}
+
+#winner #button {
+    height: auto;
+    width: 100%;
+}
+
+#winner #button button {
+    margin-top: 20px;
+}
+
+#mainPage {
+    height: 550px;
+    width: 350px;
+    padding: 20px;
+    position: relative;
+    display: none;
+}
+
+#mainPage #headerBtns {
+    height: 60px;
+    width: 310px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: #16A085;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#mainPage #headerBtns button {
+    height: 60px;
+    width: 160px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#mainPage #headerBtns #O_Turn {
+    left: 160px;
+    z-index: 3;
+}
+
+#showChange {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 160px;
+    border-radius: 50px;
+    background: #145A32;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+#gameBoard {
+    height: 400px;
+    width: 330px;
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 15px;
+}
+
+.boxes {
+    background: #16A085;
+    height: 100px;
+    width: 100px;
+    box-shadow: 4.1px 8.2px 8.2px hsl(0deg 0% 0% / 0.37);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.boxes i {
+    font-size: 60px;
+    color: #fff;
+}
+
+
+/*========== Responsive =========== */
+@media (max-width: 500px){
+    #startingPage {
+        width: 350px;
+    }
+
+    #winner{
+        width: 350px;
+    }
+    #winner #winnerName{
+        font-size: 22px;
+    }
+} 
+
+@media (max-width: 455px){
+    #startingPage {
+        width: 330px;
+    }
+
+    #winner{
+        width: 300px;
+    }
+}
+
+@media (max-width: 415px){
+    #startingPage {
+        width: 285px;
+    }
+    #startingPage .title {
+        font-size: 18px;
+    }
+    #startingPage #button button{
+        font-size: 17px;
+    }
+    #startingPage .credit{
+        font-size: 16px;
+    }
+    #startingPage .credit span{
+        font-size: 19px;
+    }
+
+    #winner{
+        width: 270px;
+    }
+    #winner #winnerName{
+        font-size: 20px;
+    }
+    #winner #button button {
+        font-size: 18px;
+    }
+}
