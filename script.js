@@ -18,8 +18,7 @@ let quit = document.querySelector("#quit");
 let changeTurn = null;
 
 
-// Select Which You Want To Be>
-// X or O
+// Select Which You Want To Be i.e 'X' or 'O'
 choose.forEach(chooseNow => {
     chooseNow.addEventListener("click", () => {
         if (chooseNow.id === "playerX") {
@@ -41,7 +40,7 @@ boxes.forEach(items => {
         // Add "X" Icon If "ChangeTurn" = False
         // Add "O" Icon If "ChangeTurn" = True
         if (changeTurn == false) {
-            items.innerHTML = `<i class="fas fa-times"></i>`;
+            items.innerHTML = `<i class="uil uil-times"></i>`;
             items.id = "X";
             items.style.pointerEvents = "none";
             showChange.style.left = `160px`;
@@ -49,7 +48,7 @@ boxes.forEach(items => {
             // change The "changeTurn" Value False Into True
             changeTurn = true;
         } else {
-            items.innerHTML = `<i class="far fa-circle"></i>`;
+            items.innerHTML = `<i class="uil uil-circle"></i>`;
             items.id = "O";
             items.style.pointerEvents = "none";
             showChange.style.left = `0px`;
@@ -87,7 +86,7 @@ let winningFunc = () => {
             // Adding Winner text
             winnerName.innerText = `Player (X) Win The Game!`;
 
-            // show "Winner Page" & Hide "Mai Page"
+            // show "Winner Page" & Hide "Main Page"
             mainPage.style.display = "none";
             winner.style.display = "block";
         } else if (boxes[b[0]].id == "O" && boxes[b[1]].id == "O" && boxes[b[2]].id == "O") {
@@ -96,7 +95,7 @@ let winningFunc = () => {
             // Adding Winner text
             winnerName.innerText = `Player (O) Win The Game!`;
 
-            // show "Winner Page" & Hide "Mai Page"
+            // show "Winner Page" & Hide "Main Page"
             mainPage.style.display = "none";
             winner.style.display = "block";
         } else {
@@ -114,7 +113,7 @@ let drawFunc = () => {
         // Adding "Draw" text
         winnerName.innerText = `Match Draw!`;
 
-        // show "Winner Page" & Hide "Mai Page"
+        // show "Winner Page" & Hide "Main Page"
         mainPage.style.display = "none";
         winner.style.display = "block";
     }
